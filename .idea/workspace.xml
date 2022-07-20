@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="93d62a83-4bb0-44d4-8722-068055baf6df" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/data/models/Contact.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/data/repositories/ContactRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/data/repositories/ContactRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/africa/semicolon/trueCaller/data/repositories/ContactRepositoryImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trueCaller.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2C5vjOLPLMTbAtV7pIc89DODI5z" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "true",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="africa.semicolon.trueCaller.data.repositories" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ContactRepositoryImplTest.updateTest">
+    <configuration name="ContactRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trueCaller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.semicolon.trueCaller.data.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.semicolon.trueCaller.data.repositories" />
+      <option name="MAIN_CLASS_NAME" value="africa.semicolon.trueCaller.data.repositories.ContactRepositoryImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactRepositoryImplTest.deleteContact_findByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trueCaller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.semicolon.trueCaller.data.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.semicolon.trueCaller.data.repositories" />
+      <option name="MAIN_CLASS_NAME" value="africa.semicolon.trueCaller.data.repositories.ContactRepositoryImplTest" />
+      <option name="METHOD_NAME" value="deleteContact_findByIdTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactRepositoryImplTest.saveContact_findByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trueCaller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.semicolon.trueCaller.data.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.semicolon.trueCaller.data.repositories" />
+      <option name="MAIN_CLASS_NAME" value="africa.semicolon.trueCaller.data.repositories.ContactRepositoryImplTest" />
+      <option name="METHOD_NAME" value="saveContact_findByIdTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactRepositoryImplTest.saveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trueCaller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.semicolon.trueCaller.data.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.semicolon.trueCaller.data.repositories" />
+      <option name="MAIN_CLASS_NAME" value="africa.semicolon.trueCaller.data.repositories.ContactRepositoryImplTest" />
+      <option name="METHOD_NAME" value="saveTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactRepositoryImplTest.updateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trueCaller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.semicolon.trueCaller.data.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.semicolon.trueCaller.data.repositories" />
+      <option name="MAIN_CLASS_NAME" value="africa.semicolon.trueCaller.data.repositories.ContactRepositoryImplTest" />
+      <option name="METHOD_NAME" value="updateTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ContactRepositoryImplTest.updateTest" />
+        <item itemvalue="JUnit.ContactRepositoryImplTest" />
+        <item itemvalue="JUnit.ContactRepositoryImplTest.deleteContact_findByIdTest" />
+        <item itemvalue="JUnit.ContactRepositoryImplTest.saveContact_findByIdTest" />
+        <item itemvalue="JUnit.ContactRepositoryImplTest.saveTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="93d62a83-4bb0-44d4-8722-068055baf6df" name="Changes" comment="" />
+      <created>1658105397510</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658105397510</updated>
+      <workItem from="1658105399933" duration="764000" />
+      <workItem from="1658106208793" duration="10867000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
