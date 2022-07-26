@@ -18,4 +18,8 @@ public interface ContactRepository {
 
     Contact backUpContactsOnCloud(Contact contact);
     Contact getContactFromCloud(int contactId);
+
+    void sortContact(String j);
+
+//    void sortContact(String letters);
 }

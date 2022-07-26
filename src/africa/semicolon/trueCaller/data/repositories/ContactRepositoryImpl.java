@@ -5,7 +5,7 @@ import africa.semicolon.trueCaller.data.models.Contact;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ContactRepositoryImpl  implements ContactRepository {
+public class ContactRepositoryImpl implements ContactRepository {
     private int counter;
     private List<Contact> contacts = new ArrayList<>();
     private List<Contact> cloud = new ArrayList<>();
@@ -76,7 +76,8 @@ public class ContactRepositoryImpl  implements ContactRepository {
         cloud.add(contact);
         return contact;
     }
-    public Contact getContactFromCloud(int contactId){
+
+    public Contact getContactFromCloud(int contactId) {
         for (Contact contact : cloud) {
             if (contact.getId() == contactId) {
                 return contact;
@@ -84,4 +85,10 @@ public class ContactRepositoryImpl  implements ContactRepository {
         }
         return null;
     }
+
+    @Override
+    public void sortContact(String j) {
+
+    }
+
 }

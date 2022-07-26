@@ -14,5 +14,7 @@ public interface UserRepository {
     int count();
 
     User searchUser(String userName);
+
+    User findByEmail(String email);
 }
 
