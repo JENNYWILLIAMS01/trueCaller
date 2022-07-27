@@ -1,11 +1,24 @@
 package africa.semicolon.trueCaller.data.models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Contact {
     private int id;
     private String firstName;
     private String lastName;
     private String phoneNumber;
     private String email;
+
+    public List<Contact> getContactList() {
+        return contactList;
+    }
+
+    public void setContactList(List<Contact> contactList) {
+        this.contactList = contactList;
+    }
+
+    List<Contact> contactList = new ArrayList<>();
 
     public int getId() {
         return id;

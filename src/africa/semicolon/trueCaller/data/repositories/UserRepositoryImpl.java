@@ -17,10 +17,11 @@ public class UserRepositoryImpl implements UserRepository{
     public User save(User user) {
         User foundUser = findById(user.getId());
         if (foundUser != null){
-            user.setName(user.getName());
-            user.setUsername(user.getUsername());
-            user.setPassword(user.getPassword());
-            user.setEmail(user.getEmail());
+            user.setName(foundUser.getName());
+            user.setUsername(foundUser.getUsername());
+            user.setPassword(foundUser.getPassword());
+            user.setEmail(foundUser.getEmail());
+            user.setContacts(foundUser.getContacts());
         } else {
             counter++;
             user.setId(counter);

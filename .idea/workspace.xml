@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93d62a83-4bb0-44d4-8722-068055baf6df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/Exceptions/UserExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/dtos/Requests/RegisterUserRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/dtos/Responses/RegisterUserResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/services/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/services/iUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/africa/semicolon/trueCaller/services/UserServiceTest.java" afterDir="false" />
+    <list default="true" id="93d62a83-4bb0-44d4-8722-068055baf6df" name="Changes" comment="Check">
+      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/dtos/Requests/AddContactRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/dtos/Responses/AddContactResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/services/ContactService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/services/iContactService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/data/models/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/data/models/Contact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/data/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/data/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/data/repositories/ContactRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/data/repositories/ContactRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/data/repositories/ContactRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/data/repositories/ContactRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/data/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/data/repositories/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/data/repositories/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/data/repositories/UserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/africa/semicolon/trueCaller/data/repositories/ContactRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/africa/semicolon/trueCaller/data/repositories/ContactRepositoryImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/services/iUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/services/iUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/africa/semicolon/trueCaller/services/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/africa/semicolon/trueCaller/services/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,26 +72,11 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.UserServiceTest">
-    <configuration name="UserRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="trueCaller" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="africa.semicolon.trueCaller.data.repositories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="africa.semicolon.trueCaller.data.repositories" />
-      <option name="MAIN_CLASS_NAME" value="africa.semicolon.trueCaller.data.repositories.UserRepositoryImplTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="trueCaller" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="africa.semicolon.trueCaller.services.*" />
+          <option name="PATTERN" value="africa.semicolon.trueCaller.dtos.Requests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,11 +87,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest.duplicateEmailThrowsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest.addContactTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="trueCaller" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="africa.semicolon.trueCaller.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.semicolon.trueCaller.services" />
+      <option name="MAIN_CLASS_NAME" value="africa.semicolon.trueCaller.services.UserServiceTest" />
+      <option name="METHOD_NAME" value="addContactTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.duplicateEmailThrowsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trueCaller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.semicolon.trueCaller.dtos.Requests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,7 +123,7 @@
       <module name="trueCaller" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="africa.semicolon.trueCaller.services.*" />
+          <option name="PATTERN" value="africa.semicolon.trueCaller.dtos.Requests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -140,7 +139,7 @@
       <module name="trueCaller" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="africa.semicolon.trueCaller.services.*" />
+          <option name="PATTERN" value="africa.semicolon.trueCaller.dtos.Requests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -155,10 +154,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest.addContactTest" />
         <item itemvalue="JUnit.UserServiceTest.updateEmailTest" />
         <item itemvalue="JUnit.UserServiceTest.findUserEmailTest" />
         <item itemvalue="JUnit.UserServiceTest.duplicateEmailThrowsException" />
-        <item itemvalue="JUnit.UserRepositoryImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -186,8 +185,16 @@
       <workItem from="1658693523564" duration="386000" />
       <workItem from="1658737777876" duration="517000" />
       <workItem from="1658781281691" duration="604000" />
-      <workItem from="1658866403354" duration="2423000" />
+      <workItem from="1658866403354" duration="13378000" />
     </task>
+    <task id="LOCAL-00001" summary="Check">
+      <created>1658872209255</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1658872209255</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,5 +210,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Check" />
+    <option name="LAST_COMMIT_MESSAGE" value="Check" />
   </component>
 </project>

@@ -1,16 +1,26 @@
 package africa.semicolon.trueCaller.services;
 
 import africa.semicolon.trueCaller.Exceptions.UserExistsException;
+import africa.semicolon.trueCaller.data.repositories.UserRepository;
+import africa.semicolon.trueCaller.data.repositories.UserRepositoryImpl;
+import africa.semicolon.trueCaller.dtos.Requests.AddContactRequest;
 import africa.semicolon.trueCaller.dtos.Requests.RegisterUserRequest;
-import africa.semicolon.trueCaller.dtos.Responses.RegisterUserResponse;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class UserServiceTest {
 
-    iUserService service = new UserService();
-
+    private iUserService service;
+    private ContactService contactService;
+    private UserRepository userRepo;
+     @BeforeEach
+     void setUp() {
+         contactService = new ContactService();
+         userRepo = new UserRepositoryImpl();
+         service = new UserService(userRepo, contactService);
+     }
 
     @Test
     public void registerTest() {
@@ -55,49 +65,87 @@ public class UserServiceTest {
         assertEquals(2, service.getNumberOfUsers());
         assertThrows(UserExistsException.class, () -> service.register(request2));
     }
-
     @Test
-    public void findUserEmailTest() {
+    public void addContactTest() {
+        //given that i have a user
+        //when i add contact
+        //check that contacts size has increased
         RegisterUserRequest request = new RegisterUserRequest();
-        request.setEmail("patience506@gmail.com");
-        request.setName("patience");
-        request.setPhoneNumber("08176543148");
-        request.setUserName("pachela");
+        request.setEmail("fashola@gmail.com");
+        request.setName("oma");
+        request.setPhoneNumber("09018272272");
+        request.setUserName("posh");
         request.setPassword("password");
         service.register(request);
 
+        AddContactRequest addContactRequest = new AddContactRequest();
+        addContactRequest.setUserEmail("fashola@gmail.com");
+        addContactRequest.setName("Abdur-Rahman");
+        addContactRequest.setEmail("shafspecs@gmail.com");
+        addContactRequest.setPhoneNumber("090807686544");
+        service.addContact(addContactRequest);
 
-        RegisterUserRequest request2 = new RegisterUserRequest();
-        request2.setEmail("busola347@gmail.com");
-        request2.setName("busola");
-        request2.setPhoneNumber("09034589768");
-        request2.setUserName("bukky");
-        request2.setPassword("password");
-        service.register(request2);
+       assertEquals(1, service.findContactBelongingTo("fashola@gmail.com").size());
 
-        assertEquals(2, service.findEmail("email"));
+
+
+
+
     }
 
-    @Test
-    public void updateEmailTest(){
-        RegisterUserRequest request = new RegisterUserRequest();
-        request.setEmail("patience506@gmail.com");
-        request.setName("patience");
-        request.setPhoneNumber("08176543148");
-        request.setUserName("pachela");
-        request.setPassword("password");
-        service.register(request);
 
-        RegisterUserRequest request2 = new RegisterUserRequest();
-        request2.setEmail("busola347@gmail.com");
-        request2.setName("busola");
-        request2.setPhoneNumber("09034589768");
-        request2.setUserName("bukky");
-        request2.setPassword("password");
-        service.register(request2);
 
-        assertEquals(2, service.updateEmail("email"));
-    }
+
+
+
+
+
 }
+
+//    @Test
+//    public void findUserEmailTest() {
+//        RegisterUserRequest request = new RegisterUserRequest();
+//        request.setEmail("patience506@gmail.com");
+//        request.setName("patience");
+//        request.setPhoneNumber("08176543148");
+//        request.setUserName("pachela");
+//        request.setPassword("password");
+//        service.register(request);
+//
+//
+//        RegisterUserRequest request2 = new RegisterUserRequest();
+//        request2.setEmail("busola347@gmail.com");
+//        request2.setName("busola");
+//        request2.setPhoneNumber("09034589768");
+//        request2.setUserName("bukky");
+//        request2.setPassword("password");
+//        service.register(request2);
+//
+//        assertEquals(2, service.findEmail("email"));
+//    }
+//
+//    @Test
+//    public void updateEmailTest(){
+//        RegisterUserRequest request = new RegisterUserRequest();
+//        request.setEmail("patience506@gmail.com");
+//        request.setName("patience");
+//        request.setPhoneNumber("08176543148");
+//        request.setUserName("pachela");
+//        request.setPassword("password");
+//        service.register(request);
+//
+//        RegisterUserRequest request2 = new RegisterUserRequest();
+//        request2.setEmail("busola347@gmail.com");
+//        request2.setName("busola");
+//        request2.setPhoneNumber("09034589768");
+//        request2.setUserName("bukky");
+//        request2.setPassword("password");
+//        service.register(request2);
+//
+//        assertEquals(2, service.updateEmail("email"));
+//    }
+//
+//
+//
 
 
