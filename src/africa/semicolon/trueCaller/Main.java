@@ -20,7 +20,7 @@ public class Main {
     //if user selects a,b,c,d direct them
     {
         String mainMenuPrompt = """
-                    Welcome to True caller
+                    Welcome To Omaposh's True Caller App
                     1 -> Create an Account
                     2 -> Add contact to a user
                     3 -> Find contact belong to user
@@ -51,7 +51,8 @@ public class Main {
 
         contactRequest.setEmail(input("Enter contact email:"));
         contactRequest.setUserEmail(input("Enter your email:"));
-        contactRequest.setName(input("Enter contact's Name:"));
+        contactRequest.setFirstName(input("Enter contact's firstName:"));
+        contactRequest.setLastName(input("Enter contact's lastName:"));
         contactRequest.setPhoneNumber(input("Enter contact's phoneNumber:"));
         userController.addContact(contactRequest);
         displayMainMenu();
@@ -61,9 +62,10 @@ public class Main {
 
     private static void createAnAccount () {
         RegisterUserRequest request = new RegisterUserRequest();
-        request.setName(input("Enter name:"));
-        request.setPhoneNumber(input("Enter phone:"));
-        request.setEmail(input("Enter email:"));
+        request.setFirstName(input("Enter contact's firstName:"));
+        request.setLastName(input("Enter contact's lastName:"));
+        request.setPhoneNumber(input("Enter phoneNumber:"));
+        request.setEmail(input("Enter contact email:"));
         request.setPassword(input("Enter password:"));
 
         userController.registerUser(request);
@@ -74,4 +76,5 @@ public class Main {
         System.out.println(prompt);
         return keyboardInput.nextLine();
     }
+
 }

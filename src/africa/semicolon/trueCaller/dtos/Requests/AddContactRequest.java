@@ -2,21 +2,24 @@ package africa.semicolon.trueCaller.dtos.Requests;
 
 public class AddContactRequest {
 
-    private String name;
+    private String firstName;
+    private String lastName;
     private String phoneNumber;
     private String email;
     private String userEmail;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getPhoneNumber() {
         return phoneNumber;
+    }
+
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public void setPhoneNumber(String phoneNumber) {
@@ -38,4 +41,14 @@ public class AddContactRequest {
     public void setUserEmail(String userEmail) {
         this.userEmail = userEmail;
     }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 }
+
+

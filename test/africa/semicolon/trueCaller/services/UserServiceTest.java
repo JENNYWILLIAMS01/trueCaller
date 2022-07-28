@@ -28,7 +28,8 @@ public class UserServiceTest {
         //there is a request from
         RegisterUserRequest request = new RegisterUserRequest();
         request.setEmail("oma@gmail.com");
-        request.setName("oma");
+        request.setFirstName("omotola");
+        request.setLastName("williams");
         request.setPhoneNumber("09018272272");
         request.setUserName("posh");
         request.setPassword("password");
@@ -45,7 +46,8 @@ public class UserServiceTest {
     public void duplicateEmailThrowsException() {
         RegisterUserRequest request = new RegisterUserRequest();
         request.setEmail("oma@gmail.com");
-        request.setName("oma");
+        request.setFirstName("omotola");
+        request.setLastName("williams");
         request.setPhoneNumber("09018272272");
         request.setUserName("posh");
         request.setPassword("password");
@@ -54,7 +56,8 @@ public class UserServiceTest {
 
         RegisterUserRequest request2 = new RegisterUserRequest();
         request2.setEmail("deborah@gmail.com");
-        request2.setName("deborah");
+        request2.setFirstName("deborah");
+        request2.setLastName("jennifer");
         request2.setPhoneNumber("08070374568");
         request2.setUserName("debby");
         request2.setPassword("password2");
@@ -72,7 +75,8 @@ public class UserServiceTest {
         //check that contacts size has increased
         RegisterUserRequest request = new RegisterUserRequest();
         request.setEmail("fashola@gmail.com");
-        request.setName("oma");
+        request.setFirstName("omotola");
+        request.setLastName("williams");
         request.setPhoneNumber("09018272272");
         request.setUserName("posh");
         request.setPassword("password");
@@ -80,7 +84,8 @@ public class UserServiceTest {
 
         AddContactRequest addContactRequest = new AddContactRequest();
         addContactRequest.setUserEmail("fashola@gmail.com");
-        addContactRequest.setName("Abdur-Rahman");
+        addContactRequest.setFirstName("Abdur-Rahman");
+        addContactRequest.setLastName("fashola");
         addContactRequest.setEmail("shafspecs@gmail.com");
         addContactRequest.setPhoneNumber("090807686544");
         service.addContact(addContactRequest);

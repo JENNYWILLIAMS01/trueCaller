@@ -10,7 +10,8 @@ public class UserRepositoryImplTest {
     public void saveTest() {
         UserRepository userRepository = new UserRepositoryImpl();
         User user = new User();
-        user.setName("Omotola");
+        user.setFirstName("Omotola");
+        user.setLastName("williams");
         user.setUsername("Omaposh");
         user.setPassword("1909");
         user.setEmail("divajayjenny@gmail.com");
@@ -23,7 +24,8 @@ public class UserRepositoryImplTest {
     void saveUser_findByIdTest() {
         UserRepository userRepository = new UserRepositoryImpl();
         User user = new User();
-        user.setName("Omotola");
+        user.setFirstName("Omotola");
+        user.setLastName("williams");
         user.setUsername("Omaposh");
         user.setPassword("1909");
         user.setEmail("divajayjenny@gmail.com");
@@ -38,7 +40,8 @@ public class UserRepositoryImplTest {
     public void deleteUser_findByIdTest() {
         UserRepository userRepository = new UserRepositoryImpl();
         User user = new User();
-        user.setName("Omotola");
+        user.setFirstName("Omotola");
+        user.setLastName("williams");
         user.setUsername("Omaposh");
         user.setPassword("1909");
         user.setEmail("divajayjenny@gmail.com");
@@ -54,7 +57,8 @@ public class UserRepositoryImplTest {
     public void deleteContact_findByContactTest() {
         UserRepository userRepository = new UserRepositoryImpl();
         User user = new User();
-        user.setName("Omotola");
+        user.setFirstName("Omotola");
+        user.setLastName("williams");
         user.setUsername("Omaposh");
         user.setPassword("1909");
         user.setEmail("divajayjenny@gmail.com");
@@ -72,7 +76,8 @@ public class UserRepositoryImplTest {
     public void updateTest() {
         UserRepository userRepository = new UserRepositoryImpl();
         User user = new User();
-        user.setName("Omotola");
+        user.setFirstName("Omotola");
+        user.setLastName("williams");
         user.setUsername("omaposh");
         user.setPassword("1909");
         user.setEmail("divajayjenny@gmail.com");
@@ -81,7 +86,8 @@ public class UserRepositoryImplTest {
         User savedUser = userRepository.findById(1);
         assertEquals("omaposh", savedUser.getUsername());
 
-        user.setName("Joshua");
+        user.setFirstName("Joshua");
+        user.setLastName("oladeji");
         user.setUsername("JS");
         user.setPassword("4540");
         user.setEmail("ucj@gmail.com");
@@ -96,7 +102,8 @@ public class UserRepositoryImplTest {
     public void findAllUserTest(){
         UserRepository userRepository = new UserRepositoryImpl();
         User user = new User();
-        user.setName("Omotola");
+        user.setFirstName("Omotola");
+        user.setLastName("williams");
         user.setUsername("omaposh");
         user.setPassword("1909");
         user.setEmail("divajayjenny@gmail.com");
@@ -106,7 +113,8 @@ public class UserRepositoryImplTest {
         assertEquals("omaposh", savedUser.getUsername());
 
         User user2 = new User();
-        user2.setName("Joshua");
+        user2.setFirstName("Joshua");
+        user2.setLastName("oladeji");
         user2.setUsername("JS");
         user2.setPassword("4540");
         user2.setEmail("uj@gmail.com");
@@ -116,7 +124,8 @@ public class UserRepositoryImplTest {
         assertEquals("JS", savedUser.getUsername());
 
         User user3 = new User();
-        user3.setName("Rahman");
+        user3.setFirstName("Rahman");
+        user3.setLastName("fashola");
         user3.setUsername("shafspecs");
         user3.setPassword("7890");
         user3.setEmail("Blessing@gmail.com");
@@ -126,7 +135,8 @@ public class UserRepositoryImplTest {
         assertEquals("shafspecs", savedUser.getUsername());
 
         User user4 = new User();
-        user4.setName("Olaoluwa");
+        user4.setFirstName("Olaoluwa");
+        user4.setLastName("temiloluwa");
         user4.setUsername("jenny");
         user4.setPassword("8908");
         user4.setEmail("posh@gmail.com");
@@ -136,7 +146,8 @@ public class UserRepositoryImplTest {
         assertEquals("jenny", savedUser.getUsername());
 
         User user5 = new User();
-        user5.setName("Fashola");
+        user5.setFirstName("Fashola");
+        user5.setLastName("oluwatosin");
         user5.setUsername("seyi");
         user5.setPassword("2345");
         user5.setEmail("fashola@gmail.com");
@@ -154,13 +165,15 @@ public class UserRepositoryImplTest {
         User user = new User();
         User user2 = new User();
 
-        user.setName("Omotola");
+        user.setFirstName("Omotola");
+        user.setLastName("williams");
         user.setUsername("omaposh");
         user.setPassword("1909");
         user.setEmail("divajayjenny@gmail.com");
         userRepository.save(user);
 
-        user2.setName("Joshua");
+        user2.setFirstName("Joshua");
+        user2.setLastName("oladeji");
         user2.setUsername("JS");
         user2.setPassword("4540");
         user2.setEmail("uj@gmail.com");

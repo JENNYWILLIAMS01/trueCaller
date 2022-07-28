@@ -1,22 +1,32 @@
 package africa.semicolon.trueCaller.dtos.Responses;
 
 public class RegisterUserResponse {
-    private String name;
+    private String firstName;
+    private String lastName;
     private String email;
     private String phoneNumber;
     private String userName;
     private String passWord;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getEmail() {
         return email;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public void setEmail(String email) {

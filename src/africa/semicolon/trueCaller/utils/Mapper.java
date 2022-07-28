@@ -1,7 +1,6 @@
 package africa.semicolon.trueCaller.utils;
 
 import africa.semicolon.trueCaller.data.models.User;
-import africa.semicolon.trueCaller.data.repositories.UserRepository;
 import africa.semicolon.trueCaller.dtos.Requests.RegisterUserRequest;
 
 public class Mapper {
@@ -10,7 +9,8 @@ public class Mapper {
         userRepo.setPassword(request.getPassword());
         userRepo.setUsername(request.getUserName());
         userRepo.setEmail(request.getEmail());
-        userRepo.setName(request.getName());
+        userRepo.setFirstName(request.getFirstName());
+        userRepo.setLastName(request.getLastName());
         userRepo.setPhoneNumber(request.getPhoneNumber());
     }
 }

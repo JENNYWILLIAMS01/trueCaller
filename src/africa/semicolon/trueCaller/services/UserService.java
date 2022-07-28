@@ -57,7 +57,8 @@ public class UserService implements iUserService {
         //save user
         Contact contact = new Contact();
         contact.setEmail(addContactResponse.getEmail());
-        contact.setLastName(addContactResponse.getName());
+        contact.setLastName(addContactResponse.getLastName());
+        contact.setFirstName(addContactResponse.getLastName());
         contact.setPhoneNumber(addContactResponse.getPhoneNumber());
 
         Contact savedContact = contactService.addNewContact(contact);
