@@ -4,10 +4,12 @@ import africa.semicolon.trueCaller.Exceptions.UserExistsException;
 import africa.semicolon.trueCaller.data.models.Contact;
 import africa.semicolon.trueCaller.data.models.User;
 import africa.semicolon.trueCaller.data.repositories.UserRepository;
+import africa.semicolon.trueCaller.data.repositories.UserRepositoryImpl;
 import africa.semicolon.trueCaller.dtos.Requests.AddContactRequest;
 import africa.semicolon.trueCaller.dtos.Requests.RegisterUserRequest;
 import africa.semicolon.trueCaller.dtos.Responses.AddContactResponse;
 import africa.semicolon.trueCaller.dtos.Responses.RegisterUserResponse;
+import africa.semicolon.trueCaller.utils.Mapper;
 
 import java.util.List;
 
@@ -20,27 +22,30 @@ public class UserService implements iUserService {
         this.contactService = contactService;
     }
 
+    public UserService() {
+        this.userRepo = new UserRepositoryImpl();
+        this.contactService = new ContactService();
+    }
+
     @Override
     public RegisterUserResponse register(RegisterUserRequest request) {
+        validate(request.getEmail());
+        User user = new User();
+        Mapper.map(request, user);
+        userRepo.save(user);
+        return null;
         // check if email exists and throw exception
 
         //create a new user
         //copy fields  from request to new user
         //save new user into repository
-        User savedUser = userRepo.findByEmail(request.getEmail());
+    }
 
-        if (savedUser != null) throw new UserExistsException(request.getEmail() + " already exists!");
+    private void validate (String email) {
+        User savedUser = userRepo.findByEmail(email);
+        if (savedUser != null) throw new UserExistsException(email + " already exists!");
 
-        User user = new User();
-        user.setPassword(request.getPassword());
-        user.setUsername(request.getUserName());
-        user.setEmail(request.getEmail());
-        user.setName(request.getName());
-        user.setPhoneNumber(request.getPhoneNumber());
 
-        userRepo.save(user);
-
-        return null;
     }
 
     @Override
@@ -54,6 +59,7 @@ public class UserService implements iUserService {
         contact.setEmail(addContactResponse.getEmail());
         contact.setLastName(addContactResponse.getName());
         contact.setPhoneNumber(addContactResponse.getPhoneNumber());
+
         Contact savedContact = contactService.addNewContact(contact);
 
         User user = userRepo.findByEmail(addContactResponse.getUserEmail());

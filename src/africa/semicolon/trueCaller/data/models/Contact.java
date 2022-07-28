@@ -10,6 +10,18 @@ public class Contact {
     private String phoneNumber;
     private String email;
 
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                ", contactList=" + contactList +
+                '}';
+    }
+
     public List<Contact> getContactList() {
         return contactList;
     }
