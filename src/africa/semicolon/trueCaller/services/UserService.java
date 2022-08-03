@@ -8,9 +8,11 @@ import africa.semicolon.trueCaller.data.repositories.UserRepositoryImpl;
 import africa.semicolon.trueCaller.dtos.Requests.AddContactRequest;
 import africa.semicolon.trueCaller.dtos.Requests.RegisterUserRequest;
 import africa.semicolon.trueCaller.dtos.Responses.AddContactResponse;
+import africa.semicolon.trueCaller.dtos.Responses.AllContactResponse;
 import africa.semicolon.trueCaller.dtos.Responses.RegisterUserResponse;
 import africa.semicolon.trueCaller.utils.Mapper;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserService implements iUserService {
@@ -41,7 +43,7 @@ public class UserService implements iUserService {
         //save new user into repository
     }
 
-    private void validate (String email) {
+    private void validate(String email) {
         User savedUser = userRepo.findByEmail(email);
         if (savedUser != null) throw new UserExistsException(email + " already exists!");
 
@@ -78,11 +80,21 @@ public class UserService implements iUserService {
     }
 
     @Override
-    public List<Contact> findContactBelongingTo(String userEmail) {
+    public List<AllContactResponse> findContactsBelongingTo(String userEmail) {
         User user = userRepo.findByEmail(userEmail);
-        return user.getContacts();
+        List<Contact> allUserContacts = user.getContacts();
+        List<AllContactResponse> response = new ArrayList<>();
+        allUserContacts.forEach(contact -> {
+            AllContactResponse singleResponse = new AllContactResponse();
+            Mapper.map(singleResponse, contact);
+            response.add(singleResponse);
+        });
+        return response;
     }
 }
+
+
+
 
 //    @Override
 //    public String findEmail(String email) {

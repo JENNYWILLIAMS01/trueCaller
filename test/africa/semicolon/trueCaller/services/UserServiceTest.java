@@ -90,7 +90,7 @@ public class UserServiceTest {
         addContactRequest.setPhoneNumber("090807686544");
         service.addContact(addContactRequest);
 
-       assertEquals(1, service.findContactBelongingTo("fashola@gmail.com").size());
+       assertEquals(1, service.findContactsBelongingTo("fashola@gmail.com").size());
 
 
 

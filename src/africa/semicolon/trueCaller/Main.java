@@ -3,17 +3,23 @@ package africa.semicolon.trueCaller;
 import africa.semicolon.trueCaller.controllers.UserController;
 import africa.semicolon.trueCaller.dtos.Requests.AddContactRequest;
 import africa.semicolon.trueCaller.dtos.Requests.RegisterUserRequest;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Scanner;
-
+@SpringBootApplication
 
 public class Main {
     private static final Scanner keyboardInput = new Scanner(System.in);
     private static UserController userController = new UserController();
 
     public static void main(String[] args) {
+
+        SpringApplication.run(Main.class, args);
+
         displayMainMenu();
     }
+
 
     private static void displayMainMenu ()
     //prompt user with menu
