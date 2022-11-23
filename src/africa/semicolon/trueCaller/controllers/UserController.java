@@ -1,7 +1,6 @@
 package africa.semicolon.trueCaller.controllers;
 
 import africa.semicolon.trueCaller.Exceptions.UserExistsException;
-import africa.semicolon.trueCaller.data.models.Contact;
 import africa.semicolon.trueCaller.dtos.Requests.AddContactRequest;
 import africa.semicolon.trueCaller.dtos.Requests.RegisterUserRequest;
 import africa.semicolon.trueCaller.dtos.Responses.AddContactResponse;
